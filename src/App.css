@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+body {
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dropdown-menu {
+  padding: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type=radio]:checked + label>img {
+  border: 1px solid #fff;
+  box-shadow: 0 0 1px 1px white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inp {
+  position: absolute;
+  left: -9999px;
+}
+
+label {
+  margin-bottom: 0px;
+}
+
+.btn {
+  padding: .100rem .45rem;
+}
+
+.list-group-item {
+  padding: .45rem 1.25rem;
+}
+
+.triangle-up {
+  position: fixed;
+  right: 80px;
+  top: 30px;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #343a40;
+}
+
+.displayBackground {
+  background-color: #343a40;
+  width: 246px;
+  height: 110px;
+  position: fixed;
+  right: 10px;
+  top: 40px;
+  border-radius: 5px;
+}
+
+.row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-height: 57px;
+  margin-left: 3px;
+  margin-top: 3px;
+  flex-wrap: nowrap;
 }
 
-.App-link {
-  color: #61dafb;
+img {
+  width: 80px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 10rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 720px) {
+  #sidebar-wrapper {
+    margin-left: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
   }
 }
